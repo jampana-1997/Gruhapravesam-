@@ -1,0 +1,37 @@
+:root{
+  --cream:#fffaf0;--cream2:#fff1dc;--maroon:#6e1728;--gold:#b77b1d;
+  --text:#3d3030;--white:#fff;--shadow:0 12px 35px rgba(80,35,20,.12)
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Noto Sans Telugu",Arial,sans-serif;background:var(--cream);color:var(--text);line-height:1.7}
+h1,h2,h3{font-family:"Playfair Display","Noto Sans Telugu",serif;color:var(--maroon);line-height:1.2}
+.header{height:72px;background:#fffdf8;display:flex;align-items:center;justify-content:space-between;padding:0 7%;position:sticky;top:0;z-index:20;box-shadow:0 2px 12px #00000010}
+.brand{display:flex;gap:10px;align-items:center;color:var(--maroon);text-decoration:none}
+.brand-icon{font-size:36px;color:var(--gold)}
+.brand strong{display:block;font-family:"Playfair Display";font-size:18px}.brand small{display:block;color:var(--gold);font-size:12px}
+nav{display:flex;gap:24px}nav a{color:#382c2c;text-decoration:none;font-size:14px}nav a:hover{color:var(--maroon)}
+.btn{border:0;background:var(--maroon);color:#fff;padding:11px 22px;border-radius:8px;text-decoration:none;display:inline-block;cursor:pointer;font-weight:600;box-shadow:0 5px 15px #6e172833}.btn.small{padding:8px 16px;font-size:13px}
+.menu-btn{display:none;border:0;background:none;font-size:25px;color:var(--maroon)}
+.hero{min-height:500px;display:grid;grid-template-columns:1fr 1fr;background:var(--cream2)}
+.hero-copy{padding:70px 9%;text-align:center;display:flex;flex-direction:column;justify-content:center;align-items:center}
+.om{font-size:32px;color:var(--gold)}.blessing{color:var(--maroon);font-size:14px}.hero h1{font-family:"Noto Sans Telugu";font-size:55px;margin:10px 0}.hero h1 span{color:var(--gold);font-size:38px}.hero h2{font-family:"Noto Sans Telugu";font-size:28px}.hero h2 b{color:#bd2739}.telugu{margin:15px 0 0;font-size:17px}.hero-copy>p:last-of-type{font-family:Georgia,serif;font-size:13px}.ornament{color:var(--gold);margin:12px}
+.placeholder-photo{background:linear-gradient(135deg,#ead9b9,#c99b62);display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;font-weight:700;position:relative;overflow:hidden}
+.placeholder-photo:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,#fff5 0 3%,transparent 4% 100%)}
+.hero-photo{min-height:500px}.hero-photo div,.about-photo div{position:relative;z-index:1;text-shadow:0 2px 5px #0005}.hero-photo span{font-size:65px;display:block}.hero-photo p{font-size:18px}
+.section{padding:75px 8%;text-align:center}.about{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;text-align:left}.about-photo{height:290px;border-radius:14px;box-shadow:var(--shadow)}.about-photo div{font-size:55px;text-align:center}.about p:not(.eyebrow){max-width:600px}.eyebrow{letter-spacing:2px;color:var(--gold);font-size:12px;font-weight:700;margin-bottom:7px}
+.section h2{font-size:32px}.gallery-section{background:#fff1df}.section-title{text-align:center;margin-bottom:28px}
+.gallery-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:13px;max-width:1050px;margin:0 auto 30px}.photo-card{height:180px;border-radius:9px;box-shadow:0 5px 15px #0002;font-size:35px;flex-direction:column}.photo-card span{font-size:12px;margin-top:10px}
+.video-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:950px;margin:0 auto 30px}.video-card{height:230px;border-radius:12px;background:linear-gradient(135deg,#5c3b31,#b98445);display:flex;align-items:center;justify-content:center;position:relative;color:#fff}.video-card button{width:60px;height:60px;border-radius:50%;border:0;background:#fff;color:var(--maroon);font-size:22px;cursor:pointer}.video-card span{position:absolute;bottom:15px;left:18px}
+.event{background:var(--cream2);display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;text-align:left}.detail{padding:13px 0;border-bottom:1px solid #b77b1d44;display:flex;gap:25px}.detail b{width:130px;color:var(--maroon)}.event-card{background:#fffaf4;border-radius:18px;padding:55px;text-align:center;box-shadow:var(--shadow)}.diya{font-size:65px}.event-card h3{font-size:24px;margin:10px}
+.family-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;max-width:850px;margin:auto}.person{display:flex;flex-direction:column;align-items:center}.avatar{width:120px;height:120px;border-radius:50%;background:var(--cream2);display:flex;align-items:center;justify-content:center;font-size:55px;box-shadow:var(--shadow);margin-bottom:12px}.person b{color:var(--maroon)}.person small{color:#8b7770}
+.memories{background:#fff1df;display:grid;grid-template-columns:1fr 1fr;gap:50px;text-align:left;align-items:center}.memory-stack{height:220px;position:relative}.memory-stack div{position:absolute;background:#fff;padding:12px;font-size:60px;box-shadow:var(--shadow);border-radius:6px}.memory-stack div:nth-child(1){left:10%;transform:rotate(-8deg)}.memory-stack div:nth-child(2){left:38%;top:20px;transform:rotate(7deg)}.memory-stack div:nth-child(3){left:63%;top:60px;transform:rotate(-4deg)}
+footer{text-align:center;padding:35px;background:var(--maroon);color:#fff}footer p{font-family:"Playfair Display";font-size:20px}footer small{opacity:.8}
+@media(max-width:1000px){nav{gap:12px}.gallery-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:720px){
+  .header{padding:0 5%;height:65px}.header .btn,nav{display:none}.menu-btn{display:block}
+  nav.open{display:flex;position:absolute;top:65px;left:0;right:0;background:#fffdf8;flex-direction:column;padding:20px 8%;box-shadow:0 10px 20px #0001}
+  .hero{grid-template-columns:1fr}.hero-copy{padding:55px 7%}.hero h1{font-size:43px}.hero h1 span{font-size:31px}.hero-photo{min-height:320px}
+  .about,.event,.memories{grid-template-columns:1fr;gap:30px}.section{padding:55px 6%}.about{text-align:center}.about-photo{height:230px}
+  .gallery-grid{grid-template-columns:repeat(2,1fr)}.photo-card{height:160px}.video-grid{grid-template-columns:1fr}.video-card{height:210px}.family-grid{grid-template-columns:repeat(2,1fr)}.detail{gap:10px;flex-direction:column}.detail b{width:auto}.event-card{padding:35px 20px}
+}
