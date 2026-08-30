@@ -6,7 +6,7 @@ document.querySelectorAll("nav a").forEach(a => a.addEventListener("click", () =
 
 document.getElementById("mapBtn").addEventListener("click", e => {
   e.preventDefault();
-  alert("Replace this button with your Google Maps location link.");
+  alert("https://maps.app.goo.gl/sgbPYmF1Uf6L7pu37");
 });
 
 document.getElementById("galleryBtn").addEventListener("click", () => {
