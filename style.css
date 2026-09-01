@@ -32,7 +32,7 @@ h1,h2,h3{
 }
 
 
-/* HEADER */
+/* ================= HEADER ================= */
 
 .header{
   height:72px;
@@ -81,14 +81,24 @@ nav a{
   color:#382c2c;
   text-decoration:none;
   font-size:14px;
+  transition:.3s;
 }
 
 nav a:hover{
   color:var(--maroon);
 }
 
+.menu-btn{
+  display:none;
+  border:0;
+  background:none;
+  font-size:25px;
+  color:var(--maroon);
+  cursor:pointer;
+}
 
-/* BUTTON */
+
+/* ================= BUTTON ================= */
 
 .btn{
   border:0;
@@ -114,16 +124,8 @@ nav a:hover{
   font-size:13px;
 }
 
-.menu-btn{
-  display:none;
-  border:0;
-  background:none;
-  font-size:25px;
-  color:var(--maroon);
-}
 
-
-/* HERO */
+/* ================= HERO ================= */
 
 .hero{
   min-height:500px;
@@ -187,7 +189,7 @@ nav a:hover{
 }
 
 
-/* HERO PHOTO */
+/* ================= HERO PHOTO ================= */
 
 .hero-photo{
   min-height:500px;
@@ -226,7 +228,7 @@ nav a:hover{
 }
 
 
-/* SECTIONS */
+/* ================= SECTIONS ================= */
 
 .section{
   padding:75px 8%;
@@ -251,7 +253,7 @@ nav a:hover{
 }
 
 
-/* ABOUT */
+/* ================= ABOUT ================= */
 
 .about{
   display:grid;
@@ -264,24 +266,16 @@ nav a:hover{
 .about-photo{
   height:350px;
   border-radius:14px;
-  box-shadow:var(--shadow);
-}
-
-.placeholder-photo{
-  background:linear-gradient(135deg,#ead9b9,#c99b62);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  color:#fff;
-  font-weight:700;
-  position:relative;
   overflow:hidden;
+  box-shadow:var(--shadow);
+  background:linear-gradient(135deg,#ead9b9,#c99b62);
 }
 
-.about-photo div{
-  font-size:55px;
-  text-align:center;
+.about-photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
 }
 
 .telugu-content p{
@@ -299,7 +293,7 @@ nav a:hover{
 }
 
 
-/* GALLERY */
+/* ================= GALLERY ================= */
 
 .gallery-section{
   background:#fff1df;
@@ -316,9 +310,18 @@ nav a:hover{
 .photo-card{
   height:180px;
   border-radius:9px;
+  overflow:hidden;
+  position:relative;
+  background:linear-gradient(135deg,#ead9b9,#c99b62);
   box-shadow:0 5px 15px #0002;
-  font-size:35px;
-  flex-direction:column;
+  transition:.3s;
+}
+
+.photo-card img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
   transition:.3s;
 }
 
@@ -326,13 +329,28 @@ nav a:hover{
   transform:translateY(-5px);
 }
 
+.photo-card:hover img{
+  transform:scale(1.05);
+}
+
 .photo-card small{
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  padding:25px 8px 9px;
+  color:#fff;
   font-size:12px;
-  margin-top:10px;
+  font-weight:600;
+  text-align:center;
+  background:linear-gradient(
+    transparent,
+    rgba(0,0,0,.7)
+  );
 }
 
 
-/* VIDEOS */
+/* ================= VIDEOS ================= */
 
 .video-grid{
   display:grid;
@@ -377,7 +395,7 @@ nav a:hover{
 }
 
 
-/* EVENT */
+/* ================= EVENT ================= */
 
 .event{
   background:var(--cream2);
@@ -418,7 +436,7 @@ nav a:hover{
 }
 
 
-/* FAMILY */
+/* ================= FAMILY ================= */
 
 .family-grid{
   display:grid;
@@ -456,7 +474,7 @@ nav a:hover{
 }
 
 
-/* MEMORIES */
+/* ================= MEMORIES ================= */
 
 .memories{
   background:#fff1df;
@@ -499,7 +517,7 @@ nav a:hover{
 }
 
 
-/* RSVP */
+/* ================= RSVP ================= */
 
 .rsvp{
   background:var(--cream);
@@ -535,7 +553,7 @@ nav a:hover{
 }
 
 
-/* FOOTER */
+/* ================= FOOTER ================= */
 
 footer{
   text-align:center;
@@ -554,7 +572,7 @@ footer small{
 }
 
 
-/* MOBILE */
+/* ================= TABLET ================= */
 
 @media(max-width:1000px){
 
@@ -568,6 +586,8 @@ footer small{
 
 }
 
+
+/* ================= MOBILE ================= */
 
 @media(max-width:720px){
 
@@ -595,6 +615,10 @@ footer small{
     flex-direction:column;
     padding:20px 8%;
     box-shadow:0 10px 20px #0001;
+  }
+
+  nav.open a{
+    padding:7px 0;
   }
 
   .hero{
@@ -646,6 +670,7 @@ footer small{
 
   .gallery-grid{
     grid-template-columns:repeat(2,1fr);
+    gap:10px;
   }
 
   .photo-card{
@@ -662,6 +687,18 @@ footer small{
 
   .family-grid{
     grid-template-columns:repeat(2,1fr);
+    gap:25px 15px;
+  }
+
+  .avatar{
+    width:100px;
+    height:100px;
+    font-size:45px;
+  }
+
+  .person b{
+    font-size:14px;
+    text-align:center;
   }
 
   .detail{
@@ -679,6 +716,53 @@ footer small{
 
   .rsvp-content{
     padding:30px 20px;
+  }
+
+  .memory-stack{
+    height:190px;
+  }
+
+}
+
+
+/* ================= SMALL MOBILE ================= */
+
+@media(max-width:400px){
+
+  .brand strong{
+    font-size:16px;
+  }
+
+  .brand small{
+    font-size:10px;
+  }
+
+  .hero h1{
+    font-size:38px;
+  }
+
+  .hero h1 span{
+    font-size:28px;
+  }
+
+  .hero h2{
+    font-size:19px;
+  }
+
+  .gallery-grid{
+    gap:8px;
+  }
+
+  .photo-card{
+    height:140px;
+  }
+
+  .photo-card small{
+    font-size:11px;
+  }
+
+  .section h2{
+    font-size:28px;
   }
 
 }
